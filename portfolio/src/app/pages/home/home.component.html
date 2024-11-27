@@ -1,0 +1,126 @@
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <!-- Colonne gauche -->
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="assets/images/profile.jpg" alt="Valentin - Analytics Engineer">
+        </div>
+        <div class="profile-info">
+          <h1 class="name">VALENTIN</h1>
+          <p class="title">Analytics Engineer</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://linkedin.com/in/votre-profil" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/votre-profil" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="content-section">
+        <h2 class="section-title">About Me</h2>
+        <p class="description">
+          Je suis un Analytics Engineer passionné par la création de pipelines de données robustes, 
+          la visualisation des données, et le développement d'insights exploitables.
+        </p>
+
+        <div class="action-links">
+          <a href="/assets/cv.pdf" download class="btn">Resume</a>
+          <a routerLink="/portfolio" class="btn btn-outline">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section" id="skillsSection">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    
+    <!-- Langages de Programmation -->
+    <div class="skill-category">
+      <h3 class="category-title">Programming</h3>
+      <div class="skills-grid">
+        <div class="skill-item" (click)="toggleSkillDetails('python')">
+          <img src="assets/icons/python.svg" alt="Python" class="skill-icon">
+          <h4>Python</h4>
+        </div>
+        <div class="skill-item" (click)="toggleSkillDetails('sql')">
+          <img src="assets/icons/sql.svg" alt="SQL" class="skill-icon">
+          <h4>SQL</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Warehouse -->
+    <div class="skill-category">
+      <h3 class="category-title">Data Warehouse</h3>
+      <div class="skills-grid">
+        <div class="skill-item" (click)="toggleSkillDetails('bigquery')">
+          <img src="assets/icons/bigquery.svg" alt="BigQuery" class="skill-icon">
+          <h4>BigQuery</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Transformation -->
+    <div class="skill-category">
+      <h3 class="category-title">Data Transformation</h3>
+      <div class="skills-grid">
+        <div class="skill-item" (click)="toggleSkillDetails('dbt')">
+          <img src="assets/icons/dbt.svg" alt="dbt" class="skill-icon">
+          <h4>dbt</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Visualization -->
+    <div class="skill-category">
+      <h3 class="category-title">Data Visualization</h3>
+      <div class="skills-grid">
+        <div class="skill-item" (click)="toggleSkillDetails('tableau')">
+          <img src="assets/icons/tableau.svg" alt="Tableau" class="skill-icon">
+          <h4>Tableau</h4>
+        </div>
+        <div class="skill-item" (click)="toggleSkillDetails('looker')">
+          <img src="assets/icons/looker.svg" alt="Looker" class="skill-icon">
+          <h4>Looker</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay pour les détails des compétences -->
+  <div class="skill-overlay" [class.active]="showOverlay" (click)="closeSkillDetails()">
+    <div class="skill-details" [class.active]="activeSkill" (click)="$event.stopPropagation()">
+      <div class="skill-details-header" *ngIf="activeSkill">
+        <img [src]="'assets/icons/' + activeSkill + '.svg'" [alt]="skillDetails[activeSkill]?.title" class="skill-icon">
+        <h3>{{ skillDetails[activeSkill]?.title }}</h3>
+        <span class="experience">{{ skillDetails[activeSkill]?.experience }}</span>
+      </div>
+      <div class="skill-details-content" *ngIf="activeSkill">
+        <p>{{ skillDetails[activeSkill]?.description }}</p>
+        <h4>Compétences clés</h4>
+        <ul>
+          <li *ngFor="let feature of skillDetails[activeSkill]?.features">
+            {{ feature }}
+          </li>
+        </ul>
+        <div class="projects-preview">
+          <h4>Projets réalisés</h4>
+          <ul>
+            <li *ngFor="let project of skillDetails[activeSkill]?.projects">
+              {{ project }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="close-button" (click)="closeSkillDetails()">×</button>
+    </div>
+  </div>
+</section>
