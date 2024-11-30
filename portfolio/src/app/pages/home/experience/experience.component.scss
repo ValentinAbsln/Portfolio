@@ -20,22 +20,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
   .experience-card {
     background-color: white;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 220px;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      border-color: #f0f0f0;
     }
 
     &.active {
@@ -43,209 +49,58 @@
       background-color: rgba(0, 123, 255, 0.02);
     }
 
-    .experience-header {
+    .company-logo {
+      width: 320px;
+      height: 140px;
+      margin-bottom: 1.25rem;
       display: flex;
       align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      justify-content: center;
+      background-color: white;
+      border-radius: 6px;
 
-      .company-logo {
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        overflow: hidden;
-        flex-shrink: 0;
-        background-color: #f8f9fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          padding: 0.5rem;
-        }
-      }
-
-      .experience-meta {
-        flex: 1;
-
-        h3 {
-          font-size: 1.1rem;
-          font-weight: 600;
-          margin-bottom: 0.25rem;
-          color: #333;
-        }
-
-        h4 {
-          font-size: 0.95rem;
-          font-weight: 500;
-          color: #666;
-          margin-bottom: 0.25rem;
-        }
-
-        .duration {
-          font-size: 0.85rem;
-          color: #888;
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
 
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .experience-content {
+      width: 100%;
 
-      .tech-tag {
-        background-color: #f8f9fa;
-        padding: 0.35rem 0.75rem;
-        border-radius: 4px;
-        font-size: 0.85rem;
-        color: #666;
-        font-weight: 500;
-      }
-    }
-  }
-
-  .experience-details {
-    position: fixed;
-    top: 0;
-    right: -500px;
-    width: 500px;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    overflow-y: auto;
-    transition: right 0.3s ease;
-    z-index: 1000;
-
-    &.active {
-      right: 0;
-    }
-
-    .details-header {
-      position: relative;
-      text-align: center;
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #eee;
-
-      .close-btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: #666;
-        cursor: pointer;
-        padding: 0.5rem;
-        transition: color 0.3s;
-
-        &:hover {
-          color: #333;
-        }
-      }
-
-      .company-logo {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
-        border-radius: 12px;
-        overflow: hidden;
-        background-color: #f8f9fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          padding: 1rem;
-        }
-      }
-
-      h3 {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: #333;
-      }
-
-      h4 {
+      .role {
         font-size: 1.1rem;
-        font-weight: 500;
-        color: #666;
+        font-weight: 600;
+        color: #333;
         margin-bottom: 0.5rem;
       }
 
       .duration {
         font-size: 0.9rem;
-        color: #888;
-      }
-    }
-
-    .details-content {
-      .section {
-        margin-bottom: 2rem;
-
-        h5 {
-          font-size: 1.1rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
-          color: #333;
-        }
-
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-
-          li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: #444;
-            line-height: 1.5;
-
-            &:before {
-              content: "•";
-              position: absolute;
-              left: 0;
-              color: #007bff;
-              font-weight: bold;
-            }
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
+        color: #666;
+        display: block;
+        margin-bottom: 1rem;
       }
 
       .tech-stack {
-        h5 {
-          font-size: 1.1rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
-          color: #333;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
 
-        .tech-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
+        .tech-tag {
+          background-color: #f8f9fa;
+          padding: 0.35rem 0.7rem;
+          border-radius: 4px;
+          font-size: 0.85rem;
+          color: #666;
+          font-weight: 500;
+          transition: all 0.2s ease;
 
-          .tech-tag {
-            background-color: #f8f9fa;
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 500;
+          &:hover {
+            background-color: #e9ecef;
+            color: #333;
           }
         }
       }
@@ -253,15 +108,13 @@
   }
 }
 
+// [Rest of the styles remain unchanged]
+
 @media (max-width: 1400px) {
   .experience-section {
     .experience-timeline {
       grid-template-columns: 1fr;
-      max-width: 700px;
-    }
-
-    .experience-details {
-      width: 400px;
+      max-width: 600px;
     }
   }
 }
@@ -270,11 +123,12 @@
   .experience-section {
     .experience-card {
       padding: 1.5rem;
-    }
+      min-height: auto;
 
-    .experience-details {
-      width: 100%;
-      right: -100%;
+      .company-logo {
+        width: 260px;
+        height: 120px;
+      }
     }
   }
 }

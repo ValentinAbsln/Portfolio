@@ -34,8 +34,8 @@ export class ExperienceComponent {
     {
       id: 1,
       role: 'Analytics Engineer',
-      company: 'Company Name',
-      logo: 'assets/images/company1.svg',
+      company: 'Wavestone',
+      logo: 'assets/images/wavestone.svg',
       duration: '2022 - Present',
       description: 'Leading data engineering initiatives and implementing modern data stack solutions.',
       achievements: [
@@ -66,8 +66,8 @@ export class ExperienceComponent {
     {
       id: 2,
       role: 'Data Analyst',
-      company: 'Previous Company',
-      logo: 'assets/images/company2.svg',
+      company: 'Auchan',
+      logo: 'assets/images/auchan.svg',
       duration: '2020 - 2022',
       description: 'Driving data-driven decision making through analytics and visualization.',
       achievements: [
