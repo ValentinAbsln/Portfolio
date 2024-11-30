@@ -1,0 +1,66 @@
+<section class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-timeline">
+      <div class="experience-card" *ngFor="let exp of experiences" (click)="toggleExperienceDetails(exp)" [class.active]="selectedExperience?.id === exp.id">
+        <div class="experience-header">
+          <div class="company-logo">
+            <img [src]="exp.logo" [alt]="exp.company">
+          </div>
+          <div class="experience-meta">
+            <h3>{{exp.role}}</h3>
+            <h4>{{exp.company}}</h4>
+            <span class="duration">{{exp.duration}}</span>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag" *ngFor="let tech of exp.techStack">{{tech}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="experience-details" [class.active]="showExperienceDetails" *ngIf="selectedExperience">
+    <div class="details-header">
+      <button class="close-btn" (click)="closeExperienceDetails()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="company-logo">
+        <img [src]="selectedExperience.logo" [alt]="selectedExperience.company">
+      </div>
+      <h3>{{selectedExperience.role}}</h3>
+      <h4>{{selectedExperience.company}}</h4>
+      <span class="duration">{{selectedExperience.duration}}</span>
+    </div>
+
+    <div class="details-content">
+      <div class="section">
+        <h5>Key Responsibilities</h5>
+        <ul>
+          <li *ngFor="let resp of selectedExperience.details.responsibilities">{{resp}}</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h5>Key Projects</h5>
+        <ul>
+          <li *ngFor="let project of selectedExperience.details.projects">{{project}}</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h5>Impact & Achievements</h5>
+        <ul>
+          <li *ngFor="let impact of selectedExperience.details.impact">{{impact}}</li>
+        </ul>
+      </div>
+
+      <div class="tech-stack">
+        <h5>Technologies Used</h5>
+        <div class="tech-tags">
+          <span class="tech-tag" *ngFor="let tech of selectedExperience.techStack">{{tech}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <path fill="#4285F4" d="M6.73 10.83v2.31h4.61c-.24 1.23-1.71 3.53-4.61 3.53A5.07 5.07 0 0 1 2 11.59c0-2.82 2.31-5.13 5.13-5.13 1.59 0 2.63.66 3.24 1.23l2.19-2.13C11.47 4.54 9.88 3.75 7.73 3.75 3.66 3.75.43 7 .43 11.09s3.23 7.34 7.3 7.34c4.21 0 7-2.97 7-7.14 0-.48-.06-.84-.12-1.2l-7.88-.26z"/>
-  <path fill="#EA4335" d="M23.49 10.83h-1.92v-1.92h-1.92v1.92h-1.92v1.92h1.92v1.92h1.92v-1.92h1.92"/>
-</svg>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>.cls-1{fill:#aecbfa;}.cls-1,.cls-2,.cls-3{fill-rule:evenodd;}.cls-2{fill:#669df6;}.cls-3{fill:#4285f4;}</style>
+</defs>
+<title>Icon_24px_BigQuery_Color</title>
+<g data-name="Product Icons">
+<g >
+<path class="cls-1" d="M6.73,10.83v2.63A4.91,4.91,0,0,0,8.44,15.2V10.83Z"/>
+<path class="cls-2" d="M9.89,8.41v7.53A7.62,7.62,0,0,0,11,16,8,8,0,0,0,12,16V8.41Z"/>
+<path class="cls-1" d="M13.64,11.86v3.29a5,5,0,0,0,1.7-1.82V11.86Z"/>
+<path class="cls-3" d="M17.74,16.32l-1.42,1.42a.42.42,0,0,0,0,.6l3.54,3.54a.42.42,0,0,0,.59,0l1.43-1.43a.42.42,0,0,0,0-.59l-3.54-3.54a.42.42,0,0,0-.6,0"/>
+<path class="cls-2" d="M11,2a9,9,0,1,0,9,9,9,9,0,0,0-9-9m0,15.69A6.68,6.68,0,1,1,17.69,11,6.68,6.68,0,0,1,11,17.69"/>
+</g>
+</g>
+</svg>

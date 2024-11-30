@@ -1,23 +1,20 @@
 <div class="app-container">
-  <app-navbar></app-navbar>
-  <main class="main-content">
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/">
+        < VALENTIN >
+      </a>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+  </nav>
+
+  <main>
     <router-outlet></router-outlet>
   </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p class="code-style">
-          Built with Angular
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/votre-profil" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/votre-profil" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
 </div>
