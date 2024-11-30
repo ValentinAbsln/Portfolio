@@ -1,35 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  // Couleurs principales
   --primary-color: #1e293b;
   --secondary-color: #334155;
   --accent-color: #475569;
-  
-  // Arrière-plans
-  --background-color: #ffffff;
+  --background-color: transparent;
   --surface-color: #f8fafc;
   --card-color: #ffffff;
   --card-hover: #f1f5f9;
-  
-  // Texte
   --text-primary: #1e293b;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
-  
-  // Bordures et ombres
   --border-color: #e2e8f0;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  
-  // Espacement
-  --spacing-unit: 8px;
-  --section-spacing: 6rem;
-  
-  // Transitions
-  --transition-speed: 0.3s;
-  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --navbar-height: 60px;
+  scroll-padding-top: calc(var(--navbar-height) + 20px);
 }
 
 * {
@@ -46,18 +33,31 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+section {
+  position: relative;
+  padding: 2rem 0;
+  background: transparent;
+  margin-top: var(--navbar-height);
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-unit);
+  padding: 0 2rem;
+  position: relative;
 }
 
-// Typography
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -65,15 +65,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
-// Section Titles
 .section-title {
   font-size: 2rem;
-  margin-bottom: 3rem;
-  color: var(--text-primary);
-  position: relative;
+  margin-bottom: 2rem;
   text-align: center;
+  position: relative;
   
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     bottom: -0.5rem;
@@ -81,96 +79,46 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border-radius: 2px;
   }
 }
 
-// Cards
 .card {
-  background: var(--card-color);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-speed) var(--transition-timing),
-              box-shadow var(--transition-speed) var(--transition-timing);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(226, 232, 240, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  margin-top: 1rem;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: rgba(99, 102, 241, 0.1);
+    background: rgba(255, 255, 255, 0.8);
   }
 }
 
-// Buttons
-.btn {
-  display: inline-block;
-  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 2px solid var(--primary-color);
-  border-radius: 8px;
-  transition: all var(--transition-speed) var(--transition-timing);
-  cursor: pointer;
-
-  &:hover {
-    background-color: transparent;
-    color: var(--primary-color);
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 50px;
   }
 
-  &.btn-outline {
-    background-color: transparent;
-    color: var(--primary-color);
+  section {
+    padding: 1.5rem 0;
+  }
 
-    &:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-// Links
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color var(--transition-speed) var(--transition-timing);
-
-  &:hover {
-    color: var(--accent-color);
-  }
-}
-
-// Tags
-.tag {
-  display: inline-block;
-  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1);
-  background-color: var(--surface-color);
-  color: var(--text-secondary);
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all var(--transition-speed) var(--transition-timing);
-
-  &:hover {
-    background-color: var(--card-hover);
-    color: var(--text-primary);
-  }
-}
-
-// Sections
-section {
-  padding: var(--section-spacing) 0;
-  position: relative;
-
-  &:nth-child(even) {
-    background-color: var(--surface-color);
-  }
-}
-
-// Scrollbar
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -186,21 +134,5 @@ section {
 
   &:hover {
     background: var(--secondary-color);
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-  :root {
-    --section-spacing: 4rem;
-  }
-
-  .container {
-    padding: 0 calc(var(--spacing-unit) * 2);
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
   }
 }
