@@ -1,0 +1,85 @@
+<section class="education-section">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    
+    <div class="timeline">
+      <div class="education-cards">
+        <div class="education-card" 
+             *ngFor="let edu of educations" 
+             [class.active]="selectedEducation?.id === edu.id"
+             (click)="toggleEducationDetails(edu)">
+          
+          <div class="card-content">
+            <div class="school-logo">
+              <img [src]="edu.logo" [alt]="edu.school">
+            </div>
+            
+            <div class="education-info">
+              <h3 class="degree">{{edu.degree}}</h3>
+              <h4 class="school">{{edu.school}}</h4>
+              <div class="field">{{edu.field}}</div>
+              <div class="duration-location">
+                <span class="duration">{{edu.duration}}</span>
+                <span class="separator">•</span>
+                <span class="location">{{edu.location}}</span>
+              </div>
+            </div>
+
+            <div class="skills">
+              <span class="skill-tag" *ngFor="let skill of edu.skills.slice(0, 3)">{{skill}}</span>
+              <span class="more-skills" *ngIf="edu.skills.length > 3">+{{edu.skills.length - 3}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Details Modal -->
+  <div class="modal-overlay" 
+       [class.active]="showEducationDetails" 
+       (click)="closeEducationDetails()"
+       (keydown.escape)="closeEducationDetails()">
+    <div class="modal-content" 
+         *ngIf="selectedEducation" 
+         (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeEducationDetails()">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="modal-header">
+        <div class="school-logo">
+          <img [src]="selectedEducation.logo" [alt]="selectedEducation.school">
+        </div>
+        <h3>{{selectedEducation.degree}}</h3>
+        <h4>{{selectedEducation.school}}</h4>
+        <div class="field">{{selectedEducation.field}}</div>
+        <div class="duration-location">
+          <span class="duration">{{selectedEducation.duration}}</span>
+          <span class="separator">•</span>
+          <span class="location">{{selectedEducation.location}}</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="description">
+          <p>{{selectedEducation.description}}</p>
+        </div>
+
+        <div class="section">
+          <h5>Key Highlights</h5>
+          <ul>
+            <li *ngFor="let highlight of selectedEducation.highlights">{{highlight}}</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h5>Key Skills Acquired</h5>
+          <div class="skills-grid">
+            <span class="skill-tag" *ngFor="let skill of selectedEducation.skills">{{skill}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

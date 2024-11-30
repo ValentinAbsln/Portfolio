@@ -2,7 +2,10 @@
   <div class="container">
     <h2 class="section-title">Experience</h2>
     <div class="experience-timeline">
-      <div class="experience-card" *ngFor="let exp of experiences" (click)="toggleExperienceDetails(exp)" [class.active]="selectedExperience?.id === exp.id">
+      <div class="experience-card" 
+           *ngFor="let exp of experiences" 
+           (click)="toggleExperienceDetails(exp)" 
+           [class.active]="selectedExperience?.id === exp.id">
         <div class="company-logo">
           <img [src]="exp.logo" [alt]="exp.company">
         </div>
@@ -18,16 +21,23 @@
   </div>
 
   <!-- Modal Experience Details -->
-  <div class="modal-overlay" [class.active]="showExperienceDetails" (click)="closeExperienceDetails()">
-    <div class="modal-content" *ngIf="selectedExperience" (click)="$event.stopPropagation()">
+  <div class="modal-overlay" 
+       [class.active]="showExperienceDetails" 
+       (click)="closeExperienceDetails()"
+       (keydown.escape)="closeExperienceDetails()">
+    <div class="modal-content" 
+         *ngIf="selectedExperience" 
+         (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeExperienceDetails()">
+        <i class="fas fa-times"></i>
+      </button>
+      
       <div class="modal-header">
-        <button class="close-btn" (click)="closeExperienceDetails()">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="company-logo">
           <img [src]="selectedExperience.logo" [alt]="selectedExperience.company">
         </div>
-        <h3>{{selectedExperience.role}}</h3>
+        <h3 class="role">{{selectedExperience.role}}</h3>
+        <h4 class="company">{{selectedExperience.company}}</h4>
         <span class="duration">{{selectedExperience.duration}}</span>
       </div>
 
@@ -53,9 +63,9 @@
           </ul>
         </div>
 
-        <div class="tech-stack">
+        <div class="section">
           <h5>Technologies Used</h5>
-          <div class="tech-tags">
+          <div class="tech-stack">
             <span class="tech-tag" *ngFor="let tech of selectedExperience.techStack">{{tech}}</span>
           </div>
         </div>

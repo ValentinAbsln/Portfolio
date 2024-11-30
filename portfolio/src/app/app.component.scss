@@ -1,70 +1,14 @@
-.app-container {
-  min-height: 100vh;
+:host {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  .logo {
-    a {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #000;
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-
-    a {
-      color: #666;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #000;
-      }
-
-      &.active {
-        color: #000;
-        font-weight: 600;
-      }
-    }
-  }
-}
-
-main {
+router-outlet {
   flex: 1;
-  margin-top: 64px; // Height of navbar
+  display: block;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-
-    .nav-links {
-      gap: 1rem;
-      
-      a {
-        font-size: 0.9rem;
-      }
-    }
-  }
+router-outlet + * {
+  flex: 1;
 }

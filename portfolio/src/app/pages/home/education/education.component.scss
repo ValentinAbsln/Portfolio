@@ -1,63 +1,76 @@
-.experience-section {
-  padding: 4rem 0;
-  background-color: #f8f9fa;
+.education-section {
+  padding: 6rem 0;
+  background-color: #f1f5f9;
   position: relative;
 
   .container {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 0.25rem;
+    padding: 0 2rem;
   }
 
   .section-title {
     font-size: 1.8rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     text-align: center;
+    color: #1e293b;
   }
 
-  .experience-timeline {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 1000px;
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 1200px;
     margin: 0 auto;
+
+    .education-cards {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
-  .experience-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 1.75rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease;
+  .education-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: all 0.3s ease;
     border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 220px;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
-      border-color: #f0f0f0;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 
     &.active {
-      border-color: #007bff;
-      background-color: rgba(0, 123, 255, 0.02);
+      border-color: #3b82f6;
+      background-color: rgba(59, 130, 246, 0.02);
     }
 
-    .company-logo {
-      width: 320px;
-      height: 140px;
-      margin-bottom: 1.25rem;
+    .card-content {
+      position: relative;
+    }
+
+    .school-logo {
+      width: 200px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: white;
-      border-radius: 6px;
+      border-radius: 8px;
+      padding: 1rem;
 
       img {
         width: 100%;
@@ -66,43 +79,65 @@
       }
     }
 
-    .experience-content {
-      width: 100%;
+    .education-info {
+      text-align: center;
+      margin-bottom: 1.5rem;
 
-      .role {
-        font-size: 1.1rem;
+      .degree {
+        font-size: 1.2rem;
         font-weight: 600;
-        color: #333;
+        color: #1e293b;
         margin-bottom: 0.5rem;
       }
 
-      .duration {
-        font-size: 0.9rem;
-        color: #666;
-        display: block;
-        margin-bottom: 1rem;
+      .school {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #475569;
+        margin-bottom: 0.5rem;
       }
 
-      .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
+      .field {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 0.75rem;
+      }
 
-        .tech-tag {
-          background-color: #f8f9fa;
-          padding: 0.35rem 0.7rem;
-          border-radius: 4px;
-          font-size: 0.85rem;
-          color: #666;
-          font-weight: 500;
-          transition: all 0.2s ease;
+      .duration-location {
+        font-size: 0.9rem;
+        color: #94a3b8;
 
-          &:hover {
-            background-color: #e9ecef;
-            color: #333;
-          }
+        .separator {
+          margin: 0 0.5rem;
         }
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+
+      .skill-tag {
+        background-color: #f1f5f9;
+        padding: 0.35rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 500;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: #e2e8f0;
+          color: #475569;
+        }
+      }
+
+      .more-skills {
+        font-size: 0.85rem;
+        color: #94a3b8;
+        padding: 0.35rem 0;
       }
     }
   }
@@ -176,9 +211,9 @@
       margin-bottom: 2rem;
       padding-right: 2rem;
 
-      .company-logo {
-        width: 320px;
-        height: 140px;
+      .school-logo {
+        width: 200px;
+        height: 80px;
         margin: 0 auto 1.5rem;
         
         img {
@@ -188,16 +223,22 @@
         }
       }
 
-      .role {
+      h3 {
         font-size: 1.5rem;
         color: #1e293b;
         margin-bottom: 0.5rem;
       }
 
-      .company {
+      h4 {
         font-size: 1.2rem;
         color: #475569;
         margin-bottom: 0.5rem;
+      }
+
+      .field {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 0.75rem;
       }
 
       .duration-location {
@@ -248,12 +289,12 @@
         }
       }
 
-      .tech-stack {
+      .skills-grid {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
 
-        .tech-tag {
+        .skill-tag {
           background-color: #f1f5f9;
           padding: 0.35rem 0.75rem;
           border-radius: 6px;
@@ -272,24 +313,15 @@
   }
 }
 
-@media (max-width: 1400px) {
-  .experience-section {
-    .experience-timeline {
-      grid-template-columns: 1fr;
-      max-width: 600px;
-    }
-  }
-}
-
 @media (max-width: 768px) {
-  .experience-section {
-    .experience-card {
+  .education-section {
+    .education-card {
+      min-width: 100%;
       padding: 1.5rem;
-      min-height: auto;
 
-      .company-logo {
-        width: 260px;
-        height: 120px;
+      .school-logo {
+        width: 180px;
+        height: 70px;
       }
     }
   }
@@ -299,13 +331,6 @@
       padding: 1.5rem;
       width: 95%;
       margin: 1rem;
-
-      .modal-header {
-        .company-logo {
-          width: 260px;
-          height: 120px;
-        }
-      }
     }
   }
 }
