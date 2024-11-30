@@ -1,75 +1,39 @@
 .education-section {
-  padding: 6rem 0;
-  background-color: #f1f5f9;
-  position: relative;
-
   .container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: 1000px;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    color: #1e293b;
-  }
-
-  .timeline {
-    position: relative;
-    padding: 2rem 0;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .education-cards {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+  .education-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .education-card {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    position: relative;
-    background: white;
-    border-radius: 16px;
+    background: var(--card-color);
+    border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-speed) var(--transition-timing);
+    border: 1px solid var(--border-color);
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-lg);
     }
 
     &.active {
-      border-color: #3b82f6;
-      background-color: rgba(59, 130, 246, 0.02);
-    }
-
-    .card-content {
-      position: relative;
+      border-color: var(--primary-color);
     }
 
     .school-logo {
-      width: 200px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       margin: 0 auto 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: white;
-      border-radius: 8px;
       padding: 1rem;
 
       img {
@@ -84,31 +48,31 @@
       margin-bottom: 1.5rem;
 
       .degree {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #1e293b;
+        color: var(--text-primary);
         margin-bottom: 0.5rem;
       }
 
       .school {
         font-size: 1.1rem;
-        font-weight: 500;
-        color: #475569;
+        color: var(--text-secondary);
         margin-bottom: 0.5rem;
       }
 
       .field {
         font-size: 1rem;
-        color: #64748b;
+        color: var(--text-tertiary);
         margin-bottom: 0.75rem;
       }
 
       .duration-location {
         font-size: 0.9rem;
-        color: #94a3b8;
+        color: var(--text-tertiary);
 
         .separator {
           margin: 0 0.5rem;
+          color: var(--text-tertiary);
         }
       }
     }
@@ -120,23 +84,22 @@
       justify-content: center;
 
       .skill-tag {
-        background-color: #f1f5f9;
+        background: var(--surface-color);
+        color: var(--text-secondary);
         padding: 0.35rem 0.75rem;
         border-radius: 6px;
         font-size: 0.85rem;
-        color: #64748b;
-        font-weight: 500;
-        transition: all 0.2s ease;
+        transition: all var(--transition-speed) var(--transition-timing);
 
         &:hover {
-          background-color: #e2e8f0;
-          color: #475569;
+          background: var(--card-hover);
+          color: var(--text-primary);
         }
       }
 
       .more-skills {
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: var(--text-tertiary);
         padding: 0.35rem 0;
       }
     }
@@ -156,14 +119,13 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) var(--transition-timing);
   z-index: 1000;
-  pointer-events: none;
+  backdrop-filter: blur(4px);
 
   &.active {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
 
     .modal-content {
       transform: scale(1);
@@ -172,8 +134,8 @@
   }
 
   .modal-content {
-    background: white;
-    border-radius: 16px;
+    background: var(--card-color);
+    border-radius: 12px;
     padding: 2rem;
     width: 90%;
     max-width: 800px;
@@ -182,7 +144,8 @@
     position: relative;
     transform: scale(0.9);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all var(--transition-speed) var(--transition-timing);
+    box-shadow: var(--shadow-lg);
 
     .close-btn {
       position: absolute;
@@ -191,18 +154,18 @@
       background: none;
       border: none;
       font-size: 1.5rem;
-      color: #94a3b8;
+      color: var(--text-secondary);
       cursor: pointer;
-      transition: color 0.2s ease;
       padding: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      transition: all var(--transition-speed) var(--transition-timing);
 
       &:hover {
-        color: #475569;
-        background-color: #f1f5f9;
+        color: var(--text-primary);
+        background: var(--surface-color);
       }
     }
 
@@ -212,8 +175,8 @@
       padding-right: 2rem;
 
       .school-logo {
-        width: 200px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         margin: 0 auto 1.5rem;
         
         img {
@@ -225,25 +188,25 @@
 
       h3 {
         font-size: 1.5rem;
-        color: #1e293b;
+        color: var(--text-primary);
         margin-bottom: 0.5rem;
       }
 
       h4 {
-        font-size: 1.2rem;
-        color: #475569;
+        font-size: 1.25rem;
+        color: var(--text-secondary);
         margin-bottom: 0.5rem;
       }
 
       .field {
         font-size: 1.1rem;
-        color: #64748b;
+        color: var(--text-tertiary);
         margin-bottom: 0.75rem;
       }
 
       .duration-location {
+        color: var(--text-tertiary);
         font-size: 0.9rem;
-        color: #94a3b8;
 
         .separator {
           margin: 0 0.5rem;
@@ -253,8 +216,8 @@
 
     .modal-body {
       .description {
+        color: var(--text-secondary);
         margin-bottom: 2rem;
-        color: #475569;
         line-height: 1.6;
       }
 
@@ -263,7 +226,7 @@
 
         h5 {
           font-size: 1.1rem;
-          color: #1e293b;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
 
@@ -275,13 +238,13 @@
             margin-bottom: 0.75rem;
             padding-left: 1.5rem;
             position: relative;
-            color: #475569;
+            color: var(--text-secondary);
 
             &:before {
               content: "•";
               position: absolute;
               left: 0;
-              color: #3b82f6;
+              color: var(--primary-color);
               font-size: 1.2rem;
               line-height: 1;
             }
@@ -295,17 +258,16 @@
         gap: 0.5rem;
 
         .skill-tag {
-          background-color: #f1f5f9;
+          background: var(--surface-color);
+          color: var(--text-secondary);
           padding: 0.35rem 0.75rem;
           border-radius: 6px;
           font-size: 0.85rem;
-          color: #64748b;
-          font-weight: 500;
-          transition: all 0.2s ease;
+          transition: all var(--transition-speed) var(--transition-timing);
 
           &:hover {
-            background-color: #e2e8f0;
-            color: #475569;
+            background: var(--card-hover);
+            color: var(--text-primary);
           }
         }
       }
@@ -315,13 +277,17 @@
 
 @media (max-width: 768px) {
   .education-section {
+    .education-cards {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
     .education-card {
-      min-width: 100%;
       padding: 1.5rem;
 
       .school-logo {
-        width: 180px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
       }
     }
   }
@@ -329,7 +295,6 @@
   .modal-overlay {
     .modal-content {
       padding: 1.5rem;
-      width: 95%;
       margin: 1rem;
     }
   }
