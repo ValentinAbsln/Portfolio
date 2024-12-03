@@ -9,8 +9,8 @@
         <p class="title">{{title}}</p>
         
         <div class="social-links">
-          <a href="https://instagram.com/" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
+          <a href="https://github.com/valentinabs" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
           </a>
           <a href="https://www.linkedin.com/in/valentin-absalon-559819210/" target="_blank" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
@@ -28,7 +28,10 @@
 
         <div class="action-links">
           <a href="/assets/resume.pdf" class="action-btn" download>CV</a>
-          <!--<a routerLink="/portfolio" class="action-btn">Portfolio</a>-->
+          <a href="#" class="action-btn portfolio-btn" (click)="onPortfolioClick($event)">Portfolio</a>
+        </div>
+        <div class="portfolio-message" *ngIf="showPortfolioMessage">
+          🚧 Mon portfolio est actuellement en cours de construction. Revenez bientôt ! 🚧
         </div>
       </div>
     </div>

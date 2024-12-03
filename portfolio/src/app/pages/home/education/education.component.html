@@ -24,18 +24,13 @@
                 <span class="location">{{edu.location}}</span>
               </div>
             </div>
-
-            <div class="skills">
-              <span class="skill-tag" *ngFor="let skill of edu.skills.slice(0, 3)">{{skill}}</span>
-              <span class="more-skills" *ngIf="edu.skills.length > 3">+{{edu.skills.length - 3}}</span>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Education Details Modal -->
+  <!-- Modal -->
   <div class="modal-overlay" 
        [class.active]="showEducationDetails" 
        (click)="closeEducationDetails()"
@@ -67,17 +62,10 @@
         </div>
 
         <div class="section">
-          <h5>Key Highlights</h5>
+          <h5>Cursus</h5>
           <ul>
             <li *ngFor="let highlight of selectedEducation.highlights">{{highlight}}</li>
           </ul>
-        </div>
-
-        <div class="section">
-          <h5>Key Skills Acquired</h5>
-          <div class="skills-grid">
-            <span class="skill-tag" *ngFor="let skill of selectedEducation.skills">{{skill}}</span>
-          </div>
         </div>
       </div>
     </div>

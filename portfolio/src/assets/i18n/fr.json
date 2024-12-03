@@ -1,0 +1,29 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos",
+    "PORTFOLIO": "Portfolio",
+    "PROJECTS": "Projets"
+  },
+  "HOME": {
+    "TITLE": "Développeur Full Stack",
+    "DESCRIPTION": "Passionné par le développement web et les nouvelles technologies"
+  },
+  "ABOUT": {
+    "TITLE": "À propos de moi",
+    "DESCRIPTION": "Je suis un développeur full stack passionné par la création d'applications web modernes et performantes."
+  },
+  "SKILLS": {
+    "TITLE": "Compétences"
+  },
+  "EDUCATION": {
+    "TITLE": "Formation"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Expérience"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "DESCRIPTION": "N'hésitez pas à me contacter"
+  }
+}

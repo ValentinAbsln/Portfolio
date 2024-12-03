@@ -11,13 +11,12 @@ interface Education {
   location: string;
   description: string;
   highlights: string[];
-  skills: string[];
 }
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
+  styleUrls: ['./education-card.scss', './education-modal.scss'],
   standalone: true,
   imports: [CommonModule]
 })
@@ -29,35 +28,32 @@ export class EducationComponent {
     {
       id: 1,
       school: "École d'Ingénieur",
-      logo: 'assets/images/engineering-school.svg',
+      logo: 'assets/images/TELECOMNANCY.svg',
       degree: "Diplôme d'Ingénieur",
-      field: "Data Engineering",
-      duration: "2020 - 2023",
-      location: "Paris, France",
-      description: "Formation en ingénierie des données et systèmes d'information",
+      field: "Informatique",
+      duration: "2019 - 2022",
+      location: "Nancy, France",
+      description: "Formation école d'ingénieurs en informatique et sciences du numérique",
       highlights: [
-        "Spécialisation en Data Engineering et Analytics",
-        "Projets pratiques en entreprise",
-        "Formation en management et gestion de projet"
-      ],
-      skills: ["Data Engineering", "Machine Learning", "Project Management", "Big Data"]
-    },
+        "Programmation (C , Java, Python)",
+        "Mathématiques appliquées",
+        "Réseaux et systèmes",
+        "Gestion de projet"
+      ]    },
     {
       id: 2,
       school: "Université",
-      logo: 'assets/images/university.svg',
-      degree: "Licence",
-      field: "Informatique",
-      duration: "2017 - 2020",
-      location: "Paris, France",
-      description: "Formation fondamentale en informatique et mathématiques",
+      logo: 'assets/images/ULIEGE.svg',
+      degree: "Master",
+      field: "Science des données",
+      duration: "09/2021 - 01/2022",
+      location: "Liège, Belgique",
+      description: "Formation en anglais en tant que spécialise de la donnée",
       highlights: [
-        "Bases solides en programmation",
-        "Mathématiques appliquées",
-        "Algorithmique et structures de données"
-      ],
-      skills: ["Programming", "Mathematics", "Algorithms", "Computer Science"]
-    }
+        "Machine Learning (Python)",
+        "Statistiques (R)",
+        "Data Engineering "
+      ]    }
   ];
 
   toggleEducationDetails(education: Education): void {

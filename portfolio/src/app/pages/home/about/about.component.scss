@@ -104,6 +104,7 @@
 .action-links {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 
   .action-btn {
     padding: 0.5rem 1.5rem;
@@ -118,6 +119,29 @@
       color: white;
       transform: translateY(-2px);
     }
+  }
+}
+
+.portfolio-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  color: #856404;
+  text-align: center;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

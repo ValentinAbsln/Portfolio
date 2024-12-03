@@ -21,7 +21,7 @@ interface Experience {
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss'],
+  styleUrls: ['./experience-card.scss', './experience-modal.scss'],
   standalone: true,
   imports: [CommonModule]
 })
@@ -40,7 +40,7 @@ export class ExperienceComponent {
       achievements: [
         "Réalisation d'un benchmark pour des solutions d'API Manager : cadrage, benchmark et recommandations.",
         "Développement d'un Proof of Concept (Poc) via FastAPI et python sur WSO2.",
-        "Réalisation d’une veille concurrentielle sur la stratégie data."
+        "Réalisation d'une veille concurrentielle sur la stratégie data."
       ],
       techStack: ['Python', 'WSO2', 'FastAPI']
     },
@@ -57,7 +57,7 @@ export class ExperienceComponent {
         'Mise en place de pipelines de transformation de la donnée (Dbt,Sql et BigQuery)',
         "Création et maintenance des tableaux de bord (Tableau, Looker)",
         "Maintenance et mise à jour des flux de données pour assurer la fiabilité de la donnée (Airflow, Dbt et BigQuery)",
-        "Animation de la communauté Tableau et d’une communauté interne Looker Auchan via des formations, optimisation des tableaux de bord et veille technologique."
+        "Animation de la communauté Tableau et d'une communauté interne Looker Auchan via des formations, optimisation des tableaux de bord et veille technologique."
       ],
       techStack: ['SQL','BigQuery','Dbt','Airflow','Git', 'Tableau', 'Looker']
     }

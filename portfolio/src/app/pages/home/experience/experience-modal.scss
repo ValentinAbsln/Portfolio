@@ -28,7 +28,7 @@
   .modal-content {
     background: var(--card-color);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.25rem;
     width: 90%;
     max-width: 800px;
     max-height: calc(100vh - var(--navbar-height) - 4rem);
@@ -63,13 +63,14 @@
 
     .modal-header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       padding-right: 2rem;
 
       .company-logo {
-        width: 200px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
+        width: 250px;
+        height: 160px;
+        margin: -0.5rem auto 0;
+        padding: 0.25rem;
         
         img {
           width: 100%;
@@ -79,15 +80,15 @@
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: var(--text-primary);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
       }
 
       h4 {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: var(--text-secondary);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
       }
 
       .duration {
@@ -99,17 +100,17 @@
     .modal-body {
       .description {
         color: var(--text-secondary);
-        margin-bottom: 2rem;
-        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        line-height: 1.5;
       }
 
       .section {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
 
         h5 {
           font-size: 1.1rem;
           color: var(--text-primary);
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
         }
 
         ul {
@@ -137,14 +138,14 @@
       .tech-stack {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 0.5rem;
 
         .tech-tag {
           background: var(--surface-color);
           color: var(--text-secondary);
-          padding: 0.5rem 1rem;
+          padding: 0.35rem 0.75rem;
           border-radius: 6px;
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           transition: all var(--transition-speed) var(--transition-timing);
 
           &:hover {
@@ -160,8 +161,17 @@
 @media (max-width: 768px) {
   .modal-overlay {
     .modal-content {
-      padding: 1.5rem;
-      margin: 1rem;
+      padding: 1.25rem;
+      margin: 0 1rem;
+      max-height: 75vh;
+
+      .modal-header {
+        .company-logo {
+          width: 200px;
+          height: 130px;
+          margin: -0.5rem auto 0;
+        }
+      }
     }
   }
 }

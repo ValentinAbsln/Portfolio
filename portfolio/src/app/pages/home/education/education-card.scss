@@ -1,0 +1,125 @@
+.education-section {
+  .container {
+    max-width: 1000px;
+  }
+
+  .education-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .education-card {
+    background: var(--card-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-speed) var(--transition-timing);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &.active {
+      border-color: var(--primary-color);
+    }
+
+    .school-logo {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .education-info {
+      text-align: center;
+      margin-bottom: 1.5rem;
+
+      .degree {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .school {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+      }
+
+      .field {
+        font-size: 1rem;
+        color: var(--text-tertiary);
+        margin-bottom: 0.75rem;
+      }
+
+      .duration-location {
+        font-size: 0.9rem;
+        color: var(--text-tertiary);
+
+        .separator {
+          margin: 0 0.5rem;
+          color: var(--text-tertiary);
+        }
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+
+      .skill-tag {
+        background: var(--surface-color);
+        color: var(--text-secondary);
+        padding: 0.35rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        transition: all var(--transition-speed) var(--transition-timing);
+
+        &:hover {
+          background: var(--card-hover);
+          color: var(--text-primary);
+        }
+      }
+
+      .more-skills {
+        font-size: 0.85rem;
+        color: var(--text-tertiary);
+        padding: 0.35rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    .education-cards {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .education-card {
+      padding: 1.5rem;
+
+      .school-logo {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+}
