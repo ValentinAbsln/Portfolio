@@ -11,7 +11,7 @@ import { TranslationService } from '../services/translation.service';
   imports: [CommonModule, TranslateModule]
 })
 export class NavbarComponent implements OnInit {
-  isScrolled = false;
+  isScrolled = true; // Always keep navbar visible
   activeSection = 'about';
   sections: string[] = ['about', 'skills', 'experience', 'education', 'contact'];
   currentLang: string;
@@ -26,7 +26,6 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 20;
     this.checkActiveSection();
   }
 
