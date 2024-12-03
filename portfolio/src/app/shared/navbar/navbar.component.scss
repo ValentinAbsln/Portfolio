@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
 .navbar {
   position: fixed;
   top: 0;
@@ -10,12 +12,16 @@
 
   &.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     padding: 1.2rem 0;
 
     .navbar-brand {
       .name {
-        color: #000;
+        background: linear-gradient(45deg, #000000, #1a1a1a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
       .title {
         color: #666;
@@ -61,31 +67,91 @@
   align-items: center;
   position: relative;
   padding-left: 1rem;
-  width: 250px;
+  min-width: fit-content;
+  white-space: nowrap;
   
   .name {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
+    font-weight: 600;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     position: relative;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
-    transform-origin: left center;
-
+    padding: 0.2rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revealText 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    
     &::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: -10%;
+      width: 120%;
       height: 100%;
-      background: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(0,0,0,0.1) 50%, transparent 51%, transparent 100%);
-      background-size: 200% 100%;
-      animation: modernShine 3s infinite linear;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+      );
+      transform: skew(-20deg);
+      animation: shine 3s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(45deg, #000000, #1a1a1a);
+      transform: scaleX(0);
+      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      transform-origin: left;
     }
 
     &:hover {
-      animation: modernPop 0.5s ease forwards;
+      letter-spacing: 2px;
+      transform: scale(1.02);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes revealText {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -103,34 +169,11 @@
     opacity: 0.8;
     font-weight: 300;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 
     &:hover {
       opacity: 1;
     }
-  }
-}
-
-@keyframes modernShine {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-@keyframes modernPop {
-  0% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.1) rotate(-2deg);
-  }
-  60% {
-    transform: scale(1.1) rotate(2deg);
-  }
-  100% {
-    transform: scale(1) rotate(0);
   }
 }
 
@@ -163,7 +206,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: #000;
+    background: linear-gradient(to right, #000000, #1a1a1a);
     transform: scaleX(0);
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform-origin: right;
@@ -178,7 +221,6 @@
     transform: scaleX(1);
     transform-origin: left;
     height: 3px;
-    background: linear-gradient(90deg, #000, rgba(0,0,0,0.7));
   }
 }
 
@@ -222,7 +264,6 @@
   }
 
   .navbar-brand {
-    width: auto;
     padding-left: 0.5rem;
   }
 
