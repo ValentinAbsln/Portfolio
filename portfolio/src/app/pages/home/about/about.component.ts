@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
 })
 export class AboutComponent {
   title = 'Analytics Engineer';
-  description = 'I am a passionate Analytics Engineer specialized in building robust data pipelines and creating impactful data visualizations. With expertise in modern data stack technologies, I transform complex data challenges into actionable insights and scalable solutions.';
+  description = "Data Analytics Engineer avec plus de deux ans d'expérience dans le secteur du retail. J'ai contribué à la conception et au développement d'une plateforme de self-service data, des tableaux de bord et des pipelines de données en utilisant Looker, Tableau, DBT et BigQuery. Mon approche repose sur une écoute attentive et une compréhension approfondie des besoins métiers, me permettant de concevoir des solutions data efficaces et pertinentes.";
 }
