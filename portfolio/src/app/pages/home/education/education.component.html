@@ -1,6 +1,6 @@
 <section class="education-section">
   <div class="container">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title">{{ 'EDUCATION.TITLE' | translate }}</h2>
     
     <div class="timeline">
       <div class="education-cards">
@@ -11,17 +11,17 @@
           
           <div class="card-content">
             <div class="school-logo">
-              <img [src]="edu.logo" [alt]="edu.school">
+              <img [src]="edu.logo" [alt]="getTranslationKey(edu.translationKey) + '.SCHOOL' | translate">
             </div>
             
             <div class="education-info">
-              <h3 class="degree">{{edu.degree}}</h3>
-              <h4 class="school">{{edu.school}}</h4>
-              <div class="field">{{edu.field}}</div>
+              <h3 class="degree">{{ getTranslationKey(edu.translationKey) + '.DEGREE' | translate }}</h3>
+              <h4 class="school">{{ getTranslationKey(edu.translationKey) + '.SCHOOL' | translate }}</h4>
+              <div class="field">{{ getTranslationKey(edu.translationKey) + '.FIELD' | translate }}</div>
               <div class="duration-location">
-                <span class="duration">{{edu.duration}}</span>
+                <span class="duration">{{ getTranslationKey(edu.translationKey) + '.DURATION' | translate }}</span>
                 <span class="separator">•</span>
-                <span class="location">{{edu.location}}</span>
+                <span class="location">{{ getTranslationKey(edu.translationKey) + '.LOCATION' | translate }}</span>
               </div>
             </div>
           </div>
@@ -44,27 +44,29 @@
       
       <div class="modal-header">
         <div class="school-logo">
-          <img [src]="selectedEducation.logo" [alt]="selectedEducation.school">
+          <img [src]="selectedEducation.logo" [alt]="getTranslationKey(selectedEducation.translationKey) + '.SCHOOL' | translate">
         </div>
-        <h3>{{selectedEducation.degree}}</h3>
-        <h4>{{selectedEducation.school}}</h4>
-        <div class="field">{{selectedEducation.field}}</div>
+        <h3>{{ getTranslationKey(selectedEducation.translationKey) + '.DEGREE' | translate }}</h3>
+        <h4>{{ getTranslationKey(selectedEducation.translationKey) + '.SCHOOL' | translate }}</h4>
+        <div class="field">{{ getTranslationKey(selectedEducation.translationKey) + '.FIELD' | translate }}</div>
         <div class="duration-location">
-          <span class="duration">{{selectedEducation.duration}}</span>
+          <span class="duration">{{ getTranslationKey(selectedEducation.translationKey) + '.DURATION' | translate }}</span>
           <span class="separator">•</span>
-          <span class="location">{{selectedEducation.location}}</span>
+          <span class="location">{{ getTranslationKey(selectedEducation.translationKey) + '.LOCATION' | translate }}</span>
         </div>
       </div>
 
       <div class="modal-body">
         <div class="description">
-          <p>{{selectedEducation.description}}</p>
+          <p>{{ getTranslationKey(selectedEducation.translationKey) + '.DESCRIPTION' | translate }}</p>
         </div>
 
         <div class="section">
-          <h5>Cursus</h5>
+          <h5>{{ 'EDUCATION.MODAL.CURRICULUM' | translate }}</h5>
           <ul>
-            <li *ngFor="let highlight of selectedEducation.highlights">{{highlight}}</li>
+            <li *ngFor="let highlight of (getTranslationKey(selectedEducation.translationKey) + '.HIGHLIGHTS' | translate)">
+              {{highlight}}
+            </li>
           </ul>
         </div>
       </div>
