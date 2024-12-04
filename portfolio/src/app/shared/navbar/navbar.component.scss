@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem 0;
+
+    .navbar-brand {
+      .name {
+        background: linear-gradient(45deg, #000000, #1a1a1a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .title {
+        color: #666;
+      }
+      .separator {
+        color: #666;
+      }
+    }
+
+    .nav-link {
+      color: #333;
+      &:hover, &.active {
+        color: #000;
+      }
+    }
+
+    .language-selector {
+      .lang-btn {
+        color: #333;
+        &:hover, &.active {
+          color: #000;
+        }
+      }
+      .lang-separator {
+        color: #333;
+      }
+    }
+  }
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 1rem;
+  min-width: fit-content;
+  white-space: nowrap;
+  
+  .name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    letter-spacing: 1px;
+    padding: 0.2rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revealText 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+      );
+      transform: skew(-20deg);
+      animation: shine 3s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(45deg, #000000, #1a1a1a);
+      transform: scaleX(0);
+      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      transform-origin: left;
+    }
+
+    &:hover {
+      letter-spacing: 2px;
+      transform: scale(1.02);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes revealText {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .separator {
+    margin: 0 0.8rem;
+    color: #fff;
+    font-weight: 300;
+    transition: all 0.5s ease;
+  }
+  
+  .title {
+    font-size: 1rem;
+    color: #ddd;
+    transition: all 0.5s ease;
+    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+  
+  &:hover, &.active {
+    color: #000;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: linear-gradient(90deg, 
+      transparent 0%,
+      rgba(0, 0, 0, 0.2) 25%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.2) 75%,
+      transparent 100%
+    );
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      transparent 100%
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 1;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  &.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 1;
+  }
+
+  &.active::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  width: 120px;
+
+  .lang-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover, &.active {
+      color: #000;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .lang-separator {
+    color: #fff;
+    margin: 0 0.3rem;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 0.5rem;
+  }
+
+  .navbar-brand {
+    padding-left: 0.5rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .language-selector {
+    width: auto;
+    padding-left: 1rem;
+  }
+}

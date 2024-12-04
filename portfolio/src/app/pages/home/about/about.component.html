@@ -1,0 +1,39 @@
+<section class="intro-section">
+  <div class="intro-grid">
+    <div class="profile-section">
+      <div class="profile-content">
+        <div class="profile-image">
+          <img src="assets/images/profile.jpg" alt="Profile">
+        </div>
+        <h1 class="name">VALENTIN ABSALON</h1>
+        <p class="title">{{ 'ABOUT.JOB_TITLE' | translate }}</p>
+        
+        <div class="social-links">
+          <a href="https://github.com/valentinabs" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/valentin-absalon-559819210/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+
+        <a href="mailto:contact@example.com" class="email-btn">{{ 'ABOUT.EMAIL_BTN' | translate }}</a>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="content-wrapper">
+        <h2 class="about-title">{{ 'ABOUT.HELLO' | translate }}</h2>
+        <p class="description">{{ 'ABOUT.BIO' | translate }}</p>
+
+        <div class="action-links">
+          <a href="/assets/resume.pdf" class="action-btn" download>{{ 'ABOUT.CV_BTN' | translate }}</a>
+          <a href="#" class="action-btn portfolio-btn" (click)="onPortfolioClick($event)">{{ 'ABOUT.PORTFOLIO_BTN' | translate }}</a>
+        </div>
+        <div class="portfolio-message" *ngIf="showPortfolioMessage">
+          {{ 'ABOUT.PORTFOLIO_WIP' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

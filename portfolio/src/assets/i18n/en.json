@@ -1,0 +1,109 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PORTFOLIO": "Portfolio",
+    "PROJECTS": "Projects"
+  },
+  "HOME": {
+    "TITLE": "Full Stack Developer",
+    "DESCRIPTION": "Passionate about web development and new technologies"
+  },
+  "ABOUT": {
+    "TITLE": "About me",
+    "DESCRIPTION": "I am a full stack developer passionate about creating modern and efficient web applications.",
+    "HELLO": "Hello👋🏽",
+    "JOB_TITLE": "Analytics Engineer",
+    "BIO": "Data Analytics Engineer with over two years of experience in the retail sector. I have contributed to the design and development of a self-service data platform, dashboards, and data pipelines using Looker, Tableau, DBT, and BigQuery. My approach is based on active listening and a deep understanding of business needs, allowing me to design effective and relevant data solutions.",
+    "EMAIL_BTN": "Email",
+    "CV_BTN": "CV",
+    "PORTFOLIO_BTN": "Portfolio",
+    "PORTFOLIO_WIP": "🚧 My portfolio is currently under construction. Come back soon! 🚧"
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "CATEGORIES": {
+      "PROGRAMMING": "Programming",
+      "TRANSFORMATION": "Transformation & Infrastructure",
+      "ORCHESTRATION": "Orchestration",
+      "VISUALIZATION": "Visualization"
+    }
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experience",
+    "MODAL": {
+      "TASKS": "Tasks",
+      "TECHNOLOGIES": "Technologies"
+    },
+    "COMPANIES": {
+      "AUCHAN": {
+        "ROLE": "Data Analyst",
+        "COMPANY": "Auchan",
+        "DURATION": "10/2022 - Present",
+        "DESCRIPTION": "Data Analytics Engineer who participated in modernizing the modern data stack at Auchan",
+        "ACHIEVEMENTS": [
+          "Development and deployment of Auchan France's first Looker platform with over 2000 users (BigQuery, Looker, and Dbt)",
+          "Modeling, design, and maintenance of the semantic layer (Dbt, BigQuery, LookML, and Airflow)",
+          "Implementation of data transformation pipelines (Dbt, SQL, and BigQuery)",
+          "Creation and maintenance of dashboards (Tableau, Looker)",
+          "Maintenance and updating of data flows to ensure data reliability (Airflow, Dbt, and BigQuery)",
+          "Animation of the Tableau community and an internal Auchan Looker community through training, dashboard optimization, and technology watch."
+        ]
+      },
+      "WAVESTONE": {
+        "ROLE": "IT & Data Consultant",
+        "COMPANY": "Wavestone",
+        "DURATION": "03/2022 - 08/2022",
+        "DESCRIPTION": "Intern consultant in the IT & Data department",
+        "ACHIEVEMENTS": [
+          "Conducted a benchmark for API Manager solutions: scoping, benchmarking, and recommendations.",
+          "Development of a Proof of Concept (PoC) using FastAPI and Python on WSO2.",
+          "Conducted competitive intelligence on data strategy."
+        ]
+      }
+    }
+  },
+  "EDUCATION": {
+    "TITLE": "Education",
+    "MODAL": {
+      "CURRICULUM": "Curriculum"
+    },
+    "SCHOOLS": {
+      "TELECOMNANCY": {
+        "SCHOOL": "Engineering School",
+        "DEGREE": "Engineering Degree",
+        "FIELD": "Computer Science",
+        "DURATION": "2019 - 2022",
+        "LOCATION": "Nancy, France",
+        "DESCRIPTION": "Engineering education in computer science and digital sciences",
+        "HIGHLIGHTS": [
+          "Programming (C, Java, Python)",
+          "Applied Mathematics",
+          "Networks and Systems",
+          "Project Management"
+        ]
+      },
+      "ULIEGE": {
+        "SCHOOL": "University",
+        "DEGREE": "Master's Degree",
+        "FIELD": "Data Science",
+        "DURATION": "09/2021 - 01/2022",
+        "LOCATION": "Liège, Belgium",
+        "DESCRIPTION": "English-language training as a data specialist",
+        "HIGHLIGHTS": [
+          "Machine Learning (Python)",
+          "Statistics (R)",
+          "Data Engineering"
+        ]
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "DESCRIPTION": "If you have any questions, feel free to contact me on LinkedIn or by email",
+    "BUTTONS": {
+      "LINKEDIN": "LINKEDIN",
+      "MAIL": "MAIL"
+    }
+  }
+}

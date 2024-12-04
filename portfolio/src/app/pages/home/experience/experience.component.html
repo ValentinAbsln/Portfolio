@@ -1,0 +1,68 @@
+<section class="experience-section">
+  <div class="container">
+    <h2 class="section-title">{{ 'EXPERIENCE.TITLE' | translate }}</h2>
+    <div class="experience-grid">
+      <!-- Experience Cards -->
+      <div class="experience-card" 
+           *ngFor="let experience of experiences"
+           (click)="toggleExperienceDetails(experience)" 
+           [class.active]="selectedExperience?.id === experience.id">
+        <div class="card-content">
+          <div class="company-logo">
+            <img [src]="experience.logo" [alt]="getTranslationKey(experience.translationKey) + '.COMPANY' | translate">
+          </div>
+          <div class="role">{{ getTranslationKey(experience.translationKey) + '.ROLE' | translate }}</div>
+          <div class="duration">{{ getTranslationKey(experience.translationKey) + '.DURATION' | translate }}</div>
+          <div class="tech-stack">
+            <span class="tech-tag" *ngFor="let tech of experience.techStack">{{tech}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" 
+       [class.active]="showExperienceDetails" 
+       (click)="closeExperienceDetails()"
+       (keydown.escape)="closeExperienceDetails()">
+    <div class="modal-content" 
+         *ngIf="selectedExperience" 
+         (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeExperienceDetails()">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="modal-header">
+        <div class="company-logo">
+          <img [src]="selectedExperience.logo" [alt]="getTranslationKey(selectedExperience.translationKey) + '.COMPANY' | translate">
+        </div>
+        <h3>{{ getTranslationKey(selectedExperience.translationKey) + '.ROLE' | translate }}</h3>
+        <h4>{{ getTranslationKey(selectedExperience.translationKey) + '.COMPANY' | translate }}</h4>
+        <div class="duration">{{ getTranslationKey(selectedExperience.translationKey) + '.DURATION' | translate }}</div>
+      </div>
+
+      <div class="modal-body">
+        <div class="description">
+          <p>{{ getTranslationKey(selectedExperience.translationKey) + '.DESCRIPTION' | translate }}</p>
+        </div>
+
+        <div class="section">
+          <h5>{{ 'EXPERIENCE.MODAL.TASKS' | translate }}</h5>
+          <ul>
+            <li *ngFor="let achievement of (getTranslationKey(selectedExperience.translationKey) + '.ACHIEVEMENTS' | translate)">
+              {{achievement}}
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h5>{{ 'EXPERIENCE.MODAL.TECHNOLOGIES' | translate }}</h5>
+          <div class="tech-stack">
+            <span class="tech-tag" *ngFor="let tech of selectedExperience.techStack">{{tech}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <div class="navbar-brand" (click)="scrollToSection('about')">
+      <span class="name">VALENTIN</span>
+      <span class="separator">|</span>
+      <span class="title">Data Analytics</span>
+    </div>
+    
+    <div class="navbar-links">
+      <a (click)="scrollToSection('about')" 
+         class="nav-link" 
+         [class.active]="activeSection === 'about'">{{ 'NAV.ABOUT' | translate }}</a>
+      <a (click)="scrollToSection('skills')" 
+         class="nav-link" 
+         [class.active]="activeSection === 'skills'">{{ 'SKILLS.TITLE' | translate }}</a>
+      <a (click)="scrollToSection('experience')" 
+         class="nav-link" 
+         [class.active]="activeSection === 'experience'">{{ 'EXPERIENCE.TITLE' | translate }}</a>
+      <a (click)="scrollToSection('education')" 
+         class="nav-link" 
+         [class.active]="activeSection === 'education'">{{ 'EDUCATION.TITLE' | translate }}</a>
+      <a (click)="scrollToSection('contact')" 
+         class="nav-link" 
+         [class.active]="activeSection === 'contact'">{{ 'CONTACT.TITLE' | translate }}</a>
+      
+      <div class="language-selector">
+        <button class="lang-btn" [class.active]="currentLang === 'fr'" (click)="switchLanguage('fr')">FR</button>
+        <span class="lang-separator">|</span>
+        <button class="lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>

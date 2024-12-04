@@ -1,0 +1,75 @@
+<section class="education-section">
+  <div class="container">
+    <h2 class="section-title">{{ 'EDUCATION.TITLE' | translate }}</h2>
+    
+    <div class="timeline">
+      <div class="education-cards">
+        <div class="education-card" 
+             *ngFor="let edu of educations" 
+             [class.active]="selectedEducation?.id === edu.id"
+             (click)="toggleEducationDetails(edu)">
+          
+          <div class="card-content">
+            <div class="school-logo">
+              <img [src]="edu.logo" [alt]="getTranslationKey(edu.translationKey) + '.SCHOOL' | translate">
+            </div>
+            
+            <div class="education-info">
+              <h3 class="degree">{{ getTranslationKey(edu.translationKey) + '.DEGREE' | translate }}</h3>
+              <h4 class="school">{{ getTranslationKey(edu.translationKey) + '.SCHOOL' | translate }}</h4>
+              <div class="field">{{ getTranslationKey(edu.translationKey) + '.FIELD' | translate }}</div>
+              <div class="duration-location">
+                <span class="duration">{{ getTranslationKey(edu.translationKey) + '.DURATION' | translate }}</span>
+                <span class="separator">•</span>
+                <span class="location">{{ getTranslationKey(edu.translationKey) + '.LOCATION' | translate }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" 
+       [class.active]="showEducationDetails" 
+       (click)="closeEducationDetails()"
+       (keydown.escape)="closeEducationDetails()">
+    <div class="modal-content" 
+         *ngIf="selectedEducation" 
+         (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeEducationDetails()">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="modal-header">
+        <div class="school-logo">
+          <img [src]="selectedEducation.logo" [alt]="getTranslationKey(selectedEducation.translationKey) + '.SCHOOL' | translate">
+        </div>
+        <h3>{{ getTranslationKey(selectedEducation.translationKey) + '.DEGREE' | translate }}</h3>
+        <h4>{{ getTranslationKey(selectedEducation.translationKey) + '.SCHOOL' | translate }}</h4>
+        <div class="field">{{ getTranslationKey(selectedEducation.translationKey) + '.FIELD' | translate }}</div>
+        <div class="duration-location">
+          <span class="duration">{{ getTranslationKey(selectedEducation.translationKey) + '.DURATION' | translate }}</span>
+          <span class="separator">•</span>
+          <span class="location">{{ getTranslationKey(selectedEducation.translationKey) + '.LOCATION' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="description">
+          <p>{{ getTranslationKey(selectedEducation.translationKey) + '.DESCRIPTION' | translate }}</p>
+        </div>
+
+        <div class="section">
+          <h5>{{ 'EDUCATION.MODAL.CURRICULUM' | translate }}</h5>
+          <ul>
+            <li *ngFor="let highlight of (getTranslationKey(selectedEducation.translationKey) + '.HIGHLIGHTS' | translate)">
+              {{highlight}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
