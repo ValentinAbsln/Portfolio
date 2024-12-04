@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem 0;
+
+    .navbar-brand {
+      .name {
+        background: linear-gradient(45deg, #000000, #1a1a1a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .title {
+        color: #666;
+      }
+      .separator {
+        color: #666;
+      }
+    }
+
+    .nav-link {
+      color: #333;
+      &:hover, &.active {
+        color: #000;
+      }
+    }
+
+    .language-selector {
+      .lang-btn {
+        color: #333;
+        &:hover, &.active {
+          color: #000;
+        }
+      }
+      .lang-separator {
+        color: #333;
+      }
+    }
+
+    .mobile-menu-btn span {
+      background-color: #333;
+    }
+  }
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}

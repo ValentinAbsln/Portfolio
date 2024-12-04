@@ -1,0 +1,100 @@
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    .navbar-brand {
+      .name {
+        font-size: 1rem;
+        background: linear-gradient(45deg, #000000, #1a1a1a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .title {
+        font-size: 0.8rem;
+        color: #666;
+      }
+      .separator {
+        color: #666;
+      }
+    }
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+
+    span {
+      background-color: #333;
+    }
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 0;
+    padding: 3.5rem 2rem 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+
+    &.mobile-open {
+      right: 0;
+    }
+
+    .nav-link {
+      color: #333;
+      font-size: 1.1rem;
+      width: 100%;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      margin: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover, &.active {
+        color: #000;
+      }
+    }
+
+    .language-selector {
+      width: 100%;
+      padding: 1rem 0;
+      border-left: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      justify-content: center;
+      margin-top: auto;
+
+      .lang-btn {
+        color: #333;
+        font-size: 1rem;
+
+        &:hover, &.active {
+          color: #000;
+        }
+      }
+
+      .lang-separator {
+        color: #333;
+      }
+    }
+  }
+}

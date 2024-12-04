@@ -1,0 +1,66 @@
+.language-selector {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  width: 120px;
+
+  .lang-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover, &.active {
+      color: #000;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .lang-separator {
+    color: #fff;
+    margin: 0 0.3rem;
+    opacity: 0.5;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+  position: relative;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
