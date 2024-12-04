@@ -1,8 +1,9 @@
 .footer {
   background-color: #1e293b;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   color: #94a3b8;
   font-size: 0.9rem;
+  width: 100%;
 
   .container {
     width: 100%;
@@ -15,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 
   .footer-left, .footer-right {
@@ -26,6 +28,8 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
     i {
       color: #ef4444;
@@ -43,6 +47,7 @@
       align-items: center;
       gap: 0.25rem;
       transition: color 0.3s ease;
+      white-space: nowrap;
 
       &:hover {
         color: #e2e8f0;
@@ -52,16 +57,25 @@
 
   .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 
     a {
       color: #94a3b8;
       font-size: 1.2rem;
       transition: all 0.3s ease;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.05);
+      width: 40px;
+      height: 40px;
 
       &:hover {
         color: #e2e8f0;
         transform: translateY(-2px);
+        background-color: rgba(255, 255, 255, 0.1);
       }
     }
   }
@@ -69,7 +83,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 0.75rem 0;
+    padding: 1.25rem 0;
     
     .container {
       padding: 0 1rem;
@@ -77,12 +91,50 @@
 
     .footer-content {
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1.25rem;
       text-align: center;
+    }
+
+    .credits {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      justify-content: center;
     }
 
     .social-links {
       margin-top: 0.5rem;
+      gap: 1.25rem;
+
+      a {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0;
+
+    .footer-content {
+      gap: 1rem;
+    }
+
+    .credits {
+      font-size: 0.8rem;
+      padding: 0 0.5rem;
+    }
+
+    .social-links {
+      gap: 1rem;
+
+      a {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+      }
     }
   }
 }

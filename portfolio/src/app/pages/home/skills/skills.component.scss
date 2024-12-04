@@ -17,14 +17,13 @@
   }
 
   .skills-grid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     align-items: flex-start;
   }
 
   .skill-category {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,60 +100,66 @@
         line-height: 1.2;
       }
     }
-
-    // Remove specific width adjustments for categories to ensure uniformity
-    &:nth-child(1) .skill-items,
-    &:nth-child(2) .skill-items,
-    &:nth-child(3) .skill-items,
-    &:nth-child(4) .skill-items {
-      .skill-item {
-        width: 100px;
-        height: 100px;
-      }
-    }
   }
 }
 
 @media (max-width: 1200px) {
   .skills-section {
     .skills-grid {
-      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
     }
 
     .skill-category {
-      flex: 0 0 calc(50% - 1rem);
-      margin-bottom: 2rem;
-
-      h3 {
-        min-height: auto;
-        margin-bottom: 1.5rem;
-      }
+      padding: 0 1rem;
     }
   }
 }
 
 @media (max-width: 768px) {
   .skills-section {
+    padding: 3rem 0;
+
     .container {
       padding: 0 1rem;
     }
 
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .skills-grid {
-      flex-direction: column;
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
     }
 
     .skill-category {
-      flex: 1 0 100%;
-      margin-bottom: 0;
+      padding: 0;
 
       h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        min-height: auto;
         margin-bottom: 1.5rem;
+        padding: 0;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 40px;
+          height: 2px;
+          background: var(--primary-color);
+          border-radius: 1px;
+        }
       }
 
       .skill-items {
         gap: 1rem;
+        justify-content: center;
       }
 
       .skill-item {
@@ -169,6 +174,31 @@
 
         .skill-name {
           font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    .skill-category {
+      .skill-items {
+        gap: 0.8rem;
+      }
+
+      .skill-item {
+        width: 80px;
+        height: 80px;
+        padding: 0.8rem;
+
+        .skill-icon {
+          width: 28px;
+          height: 28px;
+        }
+
+        .skill-name {
+          font-size: 0.75rem;
         }
       }
     }
