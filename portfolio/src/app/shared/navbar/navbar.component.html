@@ -6,7 +6,13 @@
       <span class="title">Data Analytics</span>
     </div>
     
-    <div class="navbar-links">
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-links" [class.mobile-open]="isMobileMenuOpen">
       <a (click)="scrollToSection('about')" 
          class="nav-link" 
          [class.active]="activeSection === 'about'">{{ 'NAV.ABOUT' | translate }}</a>

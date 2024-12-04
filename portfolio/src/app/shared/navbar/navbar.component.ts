@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   activeSection = 'about';
   sections: string[] = ['about', 'skills', 'experience', 'education', 'contact'];
   currentLang: string;
+  isMobileMenuOpen = false;
 
   constructor(private translationService: TranslationService) {
     this.currentLang = this.translationService.getCurrentLang();
@@ -27,6 +28,22 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     this.checkActiveSection();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (window.innerWidth > 768 && this.isMobileMenuOpen) {
+      this.isMobileMenuOpen = false;
+    }
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (this.isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 
   checkActiveSection() {
@@ -58,11 +75,20 @@ export class NavbarComponent implements OnInit {
         top: offsetPosition,
         behavior: 'smooth'
       });
+
+      // Fermer le menu mobile après avoir cliqué sur un lien
+      if (this.isMobileMenuOpen) {
+        this.toggleMobileMenu();
+      }
     }
   }
 
   switchLanguage(lang: string) {
     this.translationService.switchLanguage(lang);
     this.currentLang = lang;
+    // Fermer le menu mobile après avoir changé la langue
+    if (this.isMobileMenuOpen) {
+      this.toggleMobileMenu();
+    }
   }
 }
