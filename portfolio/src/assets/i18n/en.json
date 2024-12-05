@@ -40,7 +40,7 @@
         "ROLE": "Data Analyst",
         "COMPANY": "Auchan",
         "DURATION": "10/2022 - Present",
-        "DESCRIPTION": "Data Analytics Engineer who participated in modernizing the modern data stack at Auchan",
+        "DESCRIPTION": "Data Analytics Engineer who participated in modernizing the data stack at Auchan",
         "ACHIEVEMENTS": [
           "Development and deployment of Auchan France's first Looker platform with over 2000 users (BigQuery, Looker, and Dbt)",
           "Modeling, design, and maintenance of the semantic layer (Dbt, BigQuery, LookML, and Airflow)",
