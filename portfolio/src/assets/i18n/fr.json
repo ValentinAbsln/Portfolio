@@ -43,7 +43,7 @@
         "DESCRIPTION": "Data Analytics Engineer ayant participé à la modernisation de la data stack chez Auchan",
         "ACHIEVEMENTS": [
           "Développement et déploiement de la première plateforme Looker d'Auchan France avec plus de 2000 utilisateurs (BigQuery, Looker et Dbt)",
-          "Modélisation, conception et maintenance de la couche sémantique (Dbt, BiQuery, LookML et Airflow)",
+          "Modélisation, conception et maintenance de la couche sémantique (Dbt, BigQuery, LookML et Airflow)",
           "Mise en place de pipelines de transformation de la donnée (Dbt,Sql et BigQuery)",
           "Création et maintenance des tableaux de bord (Tableau, Looker)",
           "Maintenance et mise à jour des flux de données pour assurer la fiabilité de la donnée (Airflow, Dbt et BigQuery)",
