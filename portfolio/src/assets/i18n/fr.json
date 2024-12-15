@@ -13,7 +13,7 @@
     "TITLE": "À propos de moi",
     "DESCRIPTION": "Je suis un développeur full stack passionné par la création d'applications web modernes et performantes.",
     "HELLO": "Hello👋🏽",
-    "JOB_TITLE": "Analytics Engineer",
+    "JOB_TITLE": "Data Analytics Engineer",
     "BIO": "Data Analytics Engineer avec plus de deux ans d'expérience dans le secteur du retail. J'ai contribué à la conception et au développement d'une plateforme de self-service data, des tableaux de bord et des pipelines de données en utilisant Looker, Tableau, DBT et BigQuery. Mon approche repose sur une écoute attentive et une compréhension approfondie des besoins métiers, me permettant de concevoir des solutions data efficaces et pertinentes.",
     "EMAIL_BTN": "Email",
     "CV_BTN": "CV",
