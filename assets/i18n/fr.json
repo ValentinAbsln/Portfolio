@@ -1,0 +1,109 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos",
+    "PORTFOLIO": "Portfolio",
+    "PROJECTS": "Projets"
+  },
+  "HOME": {
+    "TITLE": "Développeur Full Stack",
+    "DESCRIPTION": "Passionné par le développement web et les nouvelles technologies"
+  },
+  "ABOUT": {
+    "TITLE": "À propos de moi",
+    "DESCRIPTION": "Je suis un développeur full stack passionné par la création d'applications web modernes et performantes.",
+    "HELLO": "Hello👋🏽",
+    "JOB_TITLE": "Data Analytics Engineer",
+    "BIO": "Data Analytics Engineer avec plus de deux ans d'expérience dans le secteur du retail. J'ai contribué à la conception et au développement d'une plateforme de self-service data, des tableaux de bord et des pipelines de données en utilisant Looker, Tableau, DBT et BigQuery. Mon approche repose sur une écoute attentive et une compréhension approfondie des besoins métiers, me permettant de concevoir des solutions data efficaces et pertinentes.",
+    "EMAIL_BTN": "Email",
+    "CV_BTN": "CV",
+    "PORTFOLIO_BTN": "Portfolio",
+    "PORTFOLIO_WIP": "🚧 Mon portfolio est actuellement en cours de construction. Revenez bientôt ! 🚧"
+  },
+  "SKILLS": {
+    "TITLE": "Compétences",
+    "CATEGORIES": {
+      "PROGRAMMING": "Programmation",
+      "TRANSFORMATION": "Transformation & Infrastructure",
+      "ORCHESTRATION": "Orchestration",
+      "VISUALIZATION": "Visualisation"
+    }
+  },
+  "EXPERIENCE": {
+    "TITLE": "Expérience",
+    "MODAL": {
+      "TASKS": "Tâches",
+      "TECHNOLOGIES": "Technologies"
+    },
+    "COMPANIES": {
+      "AUCHAN": {
+        "ROLE": "Data Analytics Engineer",
+        "COMPANY": "Auchan",
+        "DURATION": "10/2022 - Aujourd'hui",
+        "DESCRIPTION": "Data Analytics Engineer ayant participé à la modernisation de la data stack chez Auchan",
+        "ACHIEVEMENTS": [
+          "Développement et déploiement de la première plateforme Looker d'Auchan France avec plus de 2000 utilisateurs (BigQuery, Looker et Dbt)",
+          "Modélisation, conception et maintenance de la couche sémantique (Dbt, BigQuery, LookML et Airflow)",
+          "Mise en place de pipelines de transformation de la donnée (Dbt,Sql et BigQuery)",
+          "Création et maintenance des tableaux de bord (Tableau, Looker)",
+          "Maintenance et mise à jour des flux de données pour assurer la fiabilité de la donnée (Airflow, Dbt et BigQuery)",
+          "Animation de la communauté Tableau et d'une communauté interne Looker Auchan via des formations, optimisation des tableaux de bord et veille technologique."
+        ]
+      },
+      "WAVESTONE": {
+        "ROLE": "Consultant IT & Data",
+        "COMPANY": "Wavestone",
+        "DURATION": "03/2022 - 08/2022",
+        "DESCRIPTION": "Stagiaire consultant au sein du département IT & Data",
+        "ACHIEVEMENTS": [
+          "Réalisation d'un benchmark pour des solutions d'API Manager : cadrage, benchmark et recommandations.",
+          "Développement d'un Proof of Concept (Poc) via FastAPI et python sur WSO2.",
+          "Réalisation d'une veille concurrentielle sur la stratégie data."
+        ]
+      }
+    }
+  },
+  "EDUCATION": {
+    "TITLE": "Formation",
+    "MODAL": {
+      "CURRICULUM": "Cursus"
+    },
+    "SCHOOLS": {
+      "TELECOMNANCY": {
+        "SCHOOL": "École d'Ingénieur",
+        "DEGREE": "Diplôme d'Ingénieur",
+        "FIELD": "Informatique",
+        "DURATION": "2019 - 2022",
+        "LOCATION": "Nancy, France",
+        "DESCRIPTION": "Formation école d'ingénieurs en informatique et sciences du numérique",
+        "HIGHLIGHTS": [
+          "Programmation (C , Java, Python)",
+          "Mathématiques appliquées",
+          "Réseaux et systèmes",
+          "Gestion de projet"
+        ]
+      },
+      "ULIEGE": {
+        "SCHOOL": "Université",
+        "DEGREE": "Master",
+        "FIELD": "Science des données",
+        "DURATION": "09/2021 - 01/2022",
+        "LOCATION": "Liège, Belgique",
+        "DESCRIPTION": "Formation en anglais en tant que spécialise de la donnée",
+        "HIGHLIGHTS": [
+          "Machine Learning (Python)",
+          "Statistiques (R)",
+          "Data Engineering"
+        ]
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "DESCRIPTION": "Si vous avez des questions, n'hésitez pas à me contacter sur Linkedin ou par e-mail",
+    "BUTTONS": {
+      "LINKEDIN": "LINKEDIN",
+      "MAIL": "MAIL"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <rect width="300" height="100" fill="#f8fafc"/>
+  <path fill="#3b82f6" d="M60 70h180v5H60z"/>
+  <path fill="#3b82f6" d="M150 20l-60 20h120z"/>
+  <path fill="#3b82f6" d="M110 45h20v30h-20zm60 0h20v30h-20zm-30 0h20v30h-20z"/>
+  <path fill="#3b82f6" d="M90 45h10v30H90zm110 0h10v30h-10z"/>
+  <text x="150" y="90" font-family="Arial" font-size="14" fill="#1e293b" text-anchor="middle">Université</text>
+</svg>
