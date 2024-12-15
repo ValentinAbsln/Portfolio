@@ -13,7 +13,7 @@
     "TITLE": "À propos de moi",
     "DESCRIPTION": "Je suis un développeur full stack passionné par la création d'applications web modernes et performantes.",
     "HELLO": "Hello👋🏽",
-    "JOB_TITLE": "Data Analytics Engineer",
+    "JOB_TITLE": "Analytics Engineer",
     "BIO": "Data Analytics Engineer avec plus de deux ans d'expérience dans le secteur du retail. J'ai contribué à la conception et au développement d'une plateforme de self-service data, des tableaux de bord et des pipelines de données en utilisant Looker, Tableau, DBT et BigQuery. Mon approche repose sur une écoute attentive et une compréhension approfondie des besoins métiers, me permettant de concevoir des solutions data efficaces et pertinentes.",
     "EMAIL_BTN": "Email",
     "CV_BTN": "CV",
@@ -37,13 +37,13 @@
     },
     "COMPANIES": {
       "AUCHAN": {
-        "ROLE": "Data Analytics Engineer",
+        "ROLE": "Data Analyst",
         "COMPANY": "Auchan",
         "DURATION": "10/2022 - Aujourd'hui",
-        "DESCRIPTION": "Data Analytics Engineer ayant participé à la modernisation de la data stack chez Auchan",
+        "DESCRIPTION": "Data Analytics Engineer ayant participé à la modernisation de la modern data stack chez Auchan",
         "ACHIEVEMENTS": [
           "Développement et déploiement de la première plateforme Looker d'Auchan France avec plus de 2000 utilisateurs (BigQuery, Looker et Dbt)",
-          "Modélisation, conception et maintenance de la couche sémantique (Dbt, BigQuery, LookML et Airflow)",
+          "Modélisation, conception et maintenance de la couche sémantique (Dbt, BiQuery, LookML et Airflow)",
           "Mise en place de pipelines de transformation de la donnée (Dbt,Sql et BigQuery)",
           "Création et maintenance des tableaux de bord (Tableau, Looker)",
           "Maintenance et mise à jour des flux de données pour assurer la fiabilité de la donnée (Airflow, Dbt et BigQuery)",
