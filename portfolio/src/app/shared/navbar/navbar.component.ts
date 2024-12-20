@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   activeSection = 'about';
   sections: string[] = ['about', 'skills', 'experience', 'education', 'contact'];
   currentLang: string;
+  isMobileMenuOpen = false;
 
   constructor(private translationService: TranslationService) {
     this.currentLang = this.translationService.getCurrentLang();
@@ -58,11 +59,18 @@ export class NavbarComponent implements OnInit {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      
+      // Close mobile menu after clicking a link
+      this.isMobileMenuOpen = false;
     }
   }
 
   switchLanguage(lang: string) {
     this.translationService.switchLanguage(lang);
     this.currentLang = lang;
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }

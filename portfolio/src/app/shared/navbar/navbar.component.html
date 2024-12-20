@@ -3,10 +3,16 @@
     <div class="navbar-brand" (click)="scrollToSection('about')">
       <span class="name">VALENTIN</span>
       <span class="separator">|</span>
-      <span class="title">Data Analytics</span>
+      <span class="title">Data Analytics Engineer</span>
     </div>
     
-    <div class="navbar-links">
+    <button class="burger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-links" [class.mobile-menu-open]="isMobileMenuOpen">
       <a (click)="scrollToSection('about')" 
          class="nav-link" 
          [class.active]="activeSection === 'about'">{{ 'NAV.ABOUT' | translate }}</a>
