@@ -30,7 +30,7 @@
     }
   },
   "EXPERIENCE": {
-    "TITLE": "Expérience",
+    "TITLE": "Expériences",
     "MODAL": {
       "TASKS": "Tâches",
       "TECHNOLOGIES": "Technologies"
@@ -64,7 +64,7 @@
     }
   },
   "EDUCATION": {
-    "TITLE": "Formation",
+    "TITLE": "Formations",
     "MODAL": {
       "CURRICULUM": "Cursus"
     },
