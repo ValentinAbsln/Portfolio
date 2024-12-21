@@ -38,6 +38,7 @@
       min-height: 2.5rem;
       display: flex;
       align-items: center;
+      justify-content: center;
       margin-bottom: 1.5rem;
       line-height: 1.2;
       padding: 0 0.5rem;
@@ -142,25 +143,39 @@
     .skills-grid {
       flex-direction: column;
       gap: 2rem;
+      align-items: center;
+      width: 100%;
     }
 
     .skill-category {
-      flex: 1 0 100%;
+      flex: 0 0 100%;
       margin-bottom: 0;
+      width: 100%;
+      max-width: 320px;
 
       h3 {
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+        display: block; // Changed to block to ensure consistent text alignment
+        min-height: unset; // Remove min-height to prevent inconsistent spacing
+        padding: 0; // Remove padding that might affect alignment
       }
 
       .skill-items {
         gap: 1rem;
+        justify-content: center;
+        width: 100%;
+        padding: 0 1rem; // Add padding to the items container instead
       }
 
       .skill-item {
+        flex: 0 0 90px;
         width: 90px;
         height: 90px;
         padding: 1rem;
+        margin: 0;
 
         .skill-icon {
           width: 32px;

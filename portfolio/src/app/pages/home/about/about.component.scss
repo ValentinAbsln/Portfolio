@@ -161,11 +161,28 @@
     font-size: 1.5rem;
   }
 
+  .content-section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
   .about-title {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .description {
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .action-links {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
