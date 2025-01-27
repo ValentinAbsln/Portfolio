@@ -42,12 +42,12 @@
         "DURATION": "10/2022 - Present",
         "DESCRIPTION": "Data Analytics Engineer who participated in modernizing the modern data stack at Auchan",
         "ACHIEVEMENTS": [
-          "Development and deployment of Auchan France's first Looker platform with over 2000 users (BigQuery, Looker, and Dbt)",
-          "Modeling, design, and maintenance of the semantic layer (Dbt, BigQuery, LookML, and Airflow)",
-          "Implementation of data transformation pipelines (Dbt, SQL, and BigQuery)",
-          "Creation and maintenance of dashboards (Tableau, Looker)",
-          "Maintenance and updating of data flows to ensure data reliability (Airflow, Dbt, and BigQuery)",
-          "Animation of the Tableau community and an internal Auchan Looker community through training, dashboard optimization, and technology watch."
+          "Developed and deployed Auchan France's first Looker platform with over 2,000 users (BigQuery, Looker, DBT, Git).",
+          "Modeled, designed, and maintained the semantic layer (DBT, Airflow, and LookML).",
+          "Implemented data transformation pipelines (DBT and SQL/BigQuery).",
+          "Created and maintained dashboards (Tableau Software, Looker).",
+          "Maintained and updated data flows to ensure dashboard reliability (Airflow).",
+          "Facilitated the Tableau community and an internal Looker Auchan community through training sessions, dashboard optimization, and technology monitoring."
         ]
       },
       "WAVESTONE": {
@@ -57,20 +57,20 @@
         "DESCRIPTION": "Intern consultant in the IT & Data department",
         "ACHIEVEMENTS": [
           "Conducted a benchmark for API Manager solutions: scoping, benchmarking, and recommendations.",
-          "Development of a Proof of Concept (PoC) using FastAPI and Python on WSO2.",
+          "Developed a Proof of Concept (PoC) using FastAPI and Python on WSO2.",
           "Conducted competitive intelligence on data strategy."
         ]
       }
     }
   },
   "EDUCATION": {
-    "TITLE": "Educations",
+    "TITLE": "Education",
     "MODAL": {
       "CURRICULUM": "Curriculum"
     },
     "SCHOOLS": {
       "TELECOMNANCY": {
-        "SCHOOL": "Engineering School",
+        "SCHOOL": "Master's Degree in Computer Science Engineering",
         "DEGREE": "Engineering Degree",
         "FIELD": "Computer Science",
         "DURATION": "2019 - 2022",
