@@ -70,8 +70,8 @@
     },
     "SCHOOLS": {
       "TELECOMNANCY": {
-        "SCHOOL": "Master's Degree in Computer Science Engineering",
-        "DEGREE": "Engineering Degree",
+        "SCHOOL": "Engineering School",
+        "DEGREE": "Master's Degree in Computer Science Engineering",
         "FIELD": "Computer Science",
         "DURATION": "2019 - 2022",
         "LOCATION": "Nancy, France",
