@@ -14,7 +14,7 @@
     "DESCRIPTION": "I am a full stack developer passionate about creating modern and efficient web applications.",
     "HELLO": "Hello👋🏽",
     "JOB_TITLE": "Analytics Engineer",
-    "BIO": "Data Analytics Engineer with over two years of experience in the retail sector. I have contributed to the design and development of a self-service data platform, dashboards, and data pipelines using Looker, Tableau, DBT, and BigQuery. My approach is based on active listening and a deep understanding of business needs, allowing me to design effective and relevant data solutions.",
+    "BIO": "Data Analytics Engineer with over two years of experience in the retail sector. I have contributed to the design and development of a self-service data platform, dashboards, and data pipelines using Looker, Tableau, DBT, and BigQuery. My approach is based on attentive listening and a deep understanding of business needs, enabling me to design effective and relevant data solutions.",
     "EMAIL_BTN": "Email",
     "CV_BTN": "CV",
     "PORTFOLIO_BTN": "Portfolio",
@@ -37,7 +37,7 @@
     },
     "COMPANIES": {
       "AUCHAN": {
-        "ROLE": "Data Analyst",
+        "ROLE": "Analytics Engineer",
         "COMPANY": "Auchan",
         "DURATION": "10/2022 - Present",
         "DESCRIPTION": "Data Analytics Engineer who participated in modernizing the modern data stack at Auchan",
